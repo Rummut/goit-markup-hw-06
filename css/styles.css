@@ -785,41 +785,39 @@ body {
     left:16px;
 }
 
-.form-label-policy {
-  display: flex;
-    font-size: 12px;
-      line-height: 1.17;
-      letter-spacing: 0.04em;
-      color: var(--light-slate-color);
+
+.form-chekbox-input {
 }
-.checkbox-group {
+
+.form-label-policy {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--light-slate-color);
+  display: flex;
+  align-items: center;
   position: relative;
 }
-.form-chekbox-input {
-  visibility: hidden;
-}
-.checkbox-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  fill: #ffffff;
-  border: 1px solid var(--secondary-backgrounds-color);
+
+.form-label-policy::before {
+  content: "";
+    border: 1px solid var(--secondary-backgrounds-color);
     border-radius: 2px;
     width: 16px;
     height: 16px;
+    margin-right: 8px;
+    
 }
-
-.checkbox-icon:checked {
+.form-chekbox-input:checked + .form-label-policy::before {
   background-color: var(--main-active-color);
 }
 
-.form-text {
-  font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.04em;
-    color: var(--light-slate-color);
-    margin-left: 8px;
+.form-label-policy:hover::before {
+  border: 1px solid var(--main-brand-color);
+}
+
+.form-lable-policy:focus::before {
+  border: 1px solid var(--main-brand-color);
 }
 
 .form-link {
@@ -828,14 +826,22 @@ body {
   
     letter-spacing: 0.04em;
   
-    color: var(--main-brand-color)
+    color: var(--main-brand-color);
+    margin-left: 5px;
 }
 
+.checkbox-icon {
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  transform: translateY(-50%);
+  fill: #fff;
+}
 .form-btn {
   padding: 16px 32px;
   width: 169px;
   margin: 24px 0 24px;
-  background: var(--main-brand-color);
+  background-color: var(--main-brand-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border:none;
@@ -850,4 +856,14 @@ body {
       transform: translateX(-50%);
       outline: transparent;
       cursor: pointer;
+      transition: background-color 250ms cubic-bezier(0.4,
+        0,
+        0.2,
+        1);
 }
+
+.form-btn:hover,
+.form-btn:focus {
+    background-color: var(--main-active-color);
+      cursor: pointer;
+    }

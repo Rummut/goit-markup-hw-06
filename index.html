@@ -545,18 +545,18 @@
               placeholder="Text input"
             ></textarea>
           </label>
-          <label class="form-label-policy">
-            <div class="checkbox-group">
-              <input
-                type="checkbox"
-                class="form-chekbox-input"
-                name="checkbox"
-              />
-              <svg class="checkbox-icon" width="10" height="8">
-                <use href="./images/svg/symbol-defs.svg#icon-check"></use>
-              </svg>
-            </div>
-            <span class="form-text">I accept the teonditions of the</span>
+          <input
+            id="policy"
+            type="checkbox"
+            class="form-chekbox-input visually-hidden"
+            name="checkbox"
+          />
+          <label class="form-label-policy" for="policy">
+            I accept the teonditions of the
+
+            <svg class="checkbox-icon" width="10" height="8">
+              <use href="./images/svg/symbol-defs.svg#icon-check"></use>
+            </svg>
             <a href="" class="form-link">Privacy Policy</a>
           </label>
           <button type="submit" class="form-btn">Send</button>
